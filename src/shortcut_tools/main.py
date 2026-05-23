@@ -581,7 +581,7 @@ def clean_unreferenced_files(dry_run: bool = False) -> None:
             print(f"  Failed to delete file {file_id}: {e}")
 
 
-if __name__ == "__main__":
+def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="Shortcut tools for Docs and Files")
@@ -628,3 +628,7 @@ if __name__ == "__main__":
         sync_docs(dry_run=args.dry_run)
     elif args.command == "clean-unreferenced-files":
         clean_unreferenced_files(dry_run=args.dry_run)
+
+
+if __name__ == "__main__":
+    main()
